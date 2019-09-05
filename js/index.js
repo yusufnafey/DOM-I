@@ -49,12 +49,21 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 let navItems = document.querySelectorAll("header nav a");
-navItems[0].innerText = siteContent.nav["nav-item-1"];
-navItems[1].innerText = siteContent.nav["nav-item-2"];
-navItems[2].innerText = siteContent.nav["nav-item-3"];
-navItems[3].innerText = siteContent.nav["nav-item-4"];
-navItems[4].innerText = siteContent.nav["nav-item-5"];
-navItems[5].innerText = siteContent.nav["nav-item-6"];
+for (let i = 0; i < navItems.length; i++) {
+  navItems[i].textContent = siteContent["nav"]["nav-item-" + i];
+  navItems[i].style.color = "green";
+}
+const resume = document.createElement("a");
+const portfolio = document.createElement("a");
+
+let nav = document.querySelector("header nav");
+nav.appendChild(resume);
+nav.prepend(portfolio);
+
+resume.innerText = "Resume";
+resume.href = "#";
+portfolio.innerText = "Portfolio";
+portfolio.href = "#";
 
 // =========== CTA ===========
 let ctaText = document.querySelector(".cta .cta-text h1");
@@ -106,3 +115,7 @@ let contactP = document.querySelectorAll(".contact p");
 contactP[0].innerText = siteContent.contact.address;
 contactP[1].innerText = siteContent.contact.phone;
 contactP[2].innerText = siteContent.contact.email;
+
+// =========== FOOTER ===========
+let footerP = document.querySelector("footer p");
+footerP.innerText = siteContent.footer.copyright;
