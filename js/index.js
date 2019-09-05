@@ -43,6 +43,8 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+// =========== NAV ===========
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
@@ -53,3 +55,15 @@ navItems[2].innerText = siteContent.nav["nav-item-3"];
 navItems[3].innerText = siteContent.nav["nav-item-4"];
 navItems[4].innerText = siteContent.nav["nav-item-5"];
 navItems[5].innerText = siteContent.nav["nav-item-6"];
+
+// =========== CTA ===========
+let ctaText = document.querySelector(".cta .cta-text h1");
+ctaText.innerText = siteContent.cta["h1"];
+
+let ctaButton = document.querySelector("button");
+ctaButton.innerText = siteContent.cta.button;
+
+let ctaImg = document.querySelector("#cta-img");
+ctaImg.src = siteContent.cta["img-src"];
+
+// =========== MAIN CONTENT ===========
