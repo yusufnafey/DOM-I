@@ -44,11 +44,11 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 
-// =========== NAV ===========
+// =========== HEADER ===========
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
-let navItems = document.querySelectorAll("nav a");
+let navItems = document.querySelectorAll("header nav a");
 navItems[0].innerText = siteContent.nav["nav-item-1"];
 navItems[1].innerText = siteContent.nav["nav-item-2"];
 navItems[2].innerText = siteContent.nav["nav-item-3"];
@@ -67,3 +67,42 @@ let ctaImg = document.querySelector("#cta-img");
 ctaImg.src = siteContent.cta["img-src"];
 
 // =========== MAIN CONTENT ===========
+// ===== TOP =====
+let topH4 = document.querySelectorAll(
+  ".main-content .top-content .text-content h4"
+);
+topH4[0].innerText = siteContent["main-content"]["features-h4"];
+topH4[1].innerText = siteContent["main-content"]["about-h4"];
+
+let topP = document.querySelectorAll(
+  ".main-content .top-content .text-content p"
+);
+topP[0].innerText = siteContent["main-content"]["features-content"];
+topP[1].innerText = siteContent["main-content"]["about-content"];
+
+let mainImg = document.querySelector(".main-content #middle-img");
+mainImg.src = siteContent["main-content"]["middle-img-src"];
+
+// ===== BOTTOM =====
+let bottomH4 = document.querySelectorAll(
+  ".main-content .bottom-content .text-content h4"
+);
+bottomH4[0].innerText = siteContent["main-content"]["services-h4"];
+bottomH4[1].innerText = siteContent["main-content"]["product-h4"];
+bottomH4[2].innerText = siteContent["main-content"]["vision-h4"];
+
+let bottomP = document.querySelectorAll(
+  ".main-content .bottom-content .text-content p"
+);
+bottomP[0].innerText = siteContent["main-content"]["services-content"];
+bottomP[1].innerText = siteContent["main-content"]["product-content"];
+bottomP[2].innerText = siteContent["main-content"]["vision-content"];
+
+// =========== CONTACT ===========
+let contactH4 = document.querySelector(".contact h4");
+contactH4.innerText = siteContent.contact["contact-h4"];
+
+let contactP = document.querySelectorAll(".contact p");
+contactP[0].innerText = siteContent.contact.address;
+contactP[1].innerText = siteContent.contact.phone;
+contactP[2].innerText = siteContent.contact.email;
